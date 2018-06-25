@@ -1,0 +1,18 @@
+language: ruby
+cache: bundler
+  directories:
+    - /home/travis/.rvm/
+
+rbenv:
+  - 2.5.1
+
+# before_script:
+#   - bundle exec rake db:create --all
+#   - bundle exec rake db:migrate
+
+script:
+  - bundle exec rake test
+services:
+  - postgresql
+notifications:
+  email: false
