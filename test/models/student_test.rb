@@ -6,7 +6,9 @@ class StudentTest < ActiveSupport::TestCase
   # end
 
   def setup
-    @student = Student.new(name: "Jordan Liew", email:"yewwoei.low@u.nus.edu", phone_number: "91523852", education_level: "University", dob: "15/10/1996")
+    @student = Student.new(name: "Jordan Liew", email:"yewwoei.low@u.nus.edu", 
+                          phone_number: "91523852", education_level: "University", 
+                          dob: "15/10/1996", password: "foobar", password_confirmation: "foobar")
   end
 
   test "should be valid" do
@@ -56,6 +58,23 @@ class StudentTest < ActiveSupport::TestCase
     duplicate_student.email = @student.email.upcase
     @student.save
     assert_not duplicate_student.valid?
+  end
+
+  test "email addresses should be saved as lower-case" do
+    mixed_case_email = "Foo@ExAMPle.CoM"
+    @student.email = mixed_case_email
+    @student.save
+    assert_equal mixed_case_email.downcase, @student.reload.email
+  end
+
+  test "password should be present (nonblank)" do
+    @student.password = @student.password_confirmation = " " * 6
+    assert_not @student.valid?
+  end
+
+  test "password should have a minimum length" do
+    @student.password = @student.password_confirmation = "a" * 5
+    assert_not @student.valid?
   end
 
 end

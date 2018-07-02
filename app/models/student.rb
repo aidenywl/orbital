@@ -1,4 +1,5 @@
 class Student < ApplicationRecord
+    before_save { self.email = email.downcase }
     # ensures that the name is within 50 characters.
     validates(:name, presence: true, length: { maximum: 50})
     # ensures email within 255 characters with valid format.
@@ -6,5 +7,8 @@ class Student < ApplicationRecord
     validates :email, presence: true, length: { maximum: 255 },
                       format: { with: VALID_EMAIL_REGEX },
                       uniqueness: { case_sensitive: false }
+
+    has_secure_password
+    validates :password, presence: true, length: { minimum: 6 }
 
 end
