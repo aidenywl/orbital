@@ -51,4 +51,11 @@ class StudentTest < ActiveSupport::TestCase
     end
   end
 
+  test "email addresses should be unique" do
+    duplicate_student = @student.dup
+    duplicate_student.email = @student.email.upcase
+    @student.save
+    assert_not duplicate_student.valid?
+  end
+
 end
