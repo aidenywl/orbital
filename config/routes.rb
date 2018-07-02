@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   get '/competitions', to: 'static_pages#competition_list'
   # standard student sign up route
   get '/signup', to: 'students#new'
-
+  post '/signup', to: 'students#create'
   resources :students
 end

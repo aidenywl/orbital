@@ -17,4 +17,19 @@ class StudentsSignupTest < ActionDispatch::IntegrationTest
 
   end
 
+  # testing for valid signup
+  test "valid signup information" do
+    get signup_path
+    assert_difference 'Student.count', 1 do
+      post students_path, params: { student: { name:  "Example User",
+                                         email: "user@example.com",
+                                         password:              "password",
+                                         password_confirmation: "password",
+                                         } }
+    end
+    follow_redirect!
+    assert_template 'students/show'
+    assert_not flash.nil?
+  end
+
 end

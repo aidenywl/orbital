@@ -10,11 +10,14 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(student_params)
     if @student.save
-      # handle successful save
+      flash[:success] = "Welcome to OneSource!"
+      redirect_to @student
     else
       render 'new'
     end
   end
+
+
 
   private
 
