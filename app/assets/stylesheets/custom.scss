@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-distributed{
 	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-	box-sizing: content-box;
+	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Footer left */
 
 .footer-distributed .footer-left{
-	width: 20%;
+	width: 22%;
 }
 
 /* The company logo */
@@ -227,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Footer Right */
 
 .footer-distributed .footer-right{
-	width: 25%;
+	width: 27%;
 }
 
 .footer-distributed .footer-right i{
