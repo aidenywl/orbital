@@ -10,5 +10,9 @@ Rails.application.routes.draw do
   # standard student sign up route
   get '/signup', to: 'students#new'
   post '/signup', to: 'students#create'
+  # student login
+  get    '/login',   to: 'student_sessions#new'
+  post   '/login',   to: 'student_sessions#create'
+  delete '/logout',  to: 'student_sessions#destroy'
   resources :students
 end

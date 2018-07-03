@@ -2,7 +2,7 @@ require 'test_helper'
 
 class StudentSessionsControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
-    get student_sessions_new_url
+    get login_path
     assert_response :success
   end
 
