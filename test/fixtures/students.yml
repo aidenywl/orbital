@@ -15,3 +15,9 @@
 #   education_level: MyString
 #   dob: MyString
 #   past_competitions: MyString
+
+michael:
+  name: Michael Example
+  email: michael@example.com
+  password_digest: <%= Student.digest('password') %>
+  
