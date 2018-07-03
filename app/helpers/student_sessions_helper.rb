@@ -5,6 +5,12 @@ module StudentSessionsHelper
     session[:student_id] = student.id
   end
   
+  # Logs out the current user.
+  def log_out
+    session.delete(:student_id)
+    @current_student = nil
+  end
+  
   # Returns the current logged-in student (if any).
   def current_student
     @current_student ||= Student.find_by(id: session[:student_id])
