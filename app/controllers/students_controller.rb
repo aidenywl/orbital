@@ -11,6 +11,7 @@ class StudentsController < ApplicationController
     @student = Student.new(student_params)
     if @student.save
       log_in @student
+      remember @student
       flash[:success] = "Welcome to OneSource!"
       redirect_to @student
     else
