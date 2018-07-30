@@ -345,3 +345,54 @@ input, textarea, select, .uneditable-input {
   margin-left: 0;
 }
 
+/* landing page */
+
+*, ::before, ::after {
+	box-sizing: border-box;
+}
+
+header.masthead .intro-text .intro-lead-in {
+	padding-top: 20px;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 22px;
+    margin-bottom: 25px;
+    font-family: 'Droid Serif','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+header.masthead .intro-text .intro-heading {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 25px;
+    font-family: Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+header.masthead {
+	display: block;
+	text-align: center;
+	color: #fff;
+	background: image-url("running.jpg") no-repeat center center scroll;
+	background-size: cover;
+	width: 100%;
+	height: 50vh;
+}
+
+.btn {
+	font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+
+.btn-primary {
+	background-color: #EA933E;
+	border-color: #EA933E;
+}
+
+.btn-xl {
+	font-size: 18px;
+	padding: 20px 40px;
+}
+
+.text-uppercase {
+	text-transform: uppercase!important;
+}

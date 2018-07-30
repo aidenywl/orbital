@@ -1,8 +1,18 @@
 <% provide(:title, "Home") %>
 
-<h2>
-    Are you a student looking for competitions? Create a profile and sign-up for competitions with a click of a button.
-</h2>
+<header class="masthead">
+    <div class="splash-container">
+        <div class="intro-text">
+            <div class="intro-lead-in">
+                Find competitions. Form a team. Compete.
+            </div>
+            <div class="intro-heading text-uppercase">
+                Competition Hotpot
+            </div>
+            <%= link_to "Explore Competitions", signup_path, class: "btn btn-xl btn-primary" %>
+        </div>
+    </div>
+</header>
 
 <% unless logged_in? %>
     <center><%= link_to "Sign up", signup_path, class: "btn btn-lg btn-primary" %></center>
