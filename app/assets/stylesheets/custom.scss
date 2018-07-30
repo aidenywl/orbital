@@ -243,6 +243,15 @@ h1, h2, h3, h4, h5, h6 {
 	margin:0;
 }
 
+/* footer logo */
+
+#footer-logo {
+	position: relative;
+	max-height: 65px;
+	display: block;
+	
+  }
+
 /* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 880px) {
