@@ -12,7 +12,7 @@ class StudentsController < ApplicationController
     if @student.save
       log_in @student
       remember @student
-      flash[:success] = "Welcome to OneSource!"
+      flash[:success] = "Welcome to HotPot!"
       redirect_to @student
     else
       render 'new'

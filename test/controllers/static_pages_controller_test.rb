@@ -3,7 +3,7 @@ require 'test_helper'
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   
   def setup
-    @website_name = "OneSource"
+    @website_name = "HotPot"
   end
 
   test "should get root" do
