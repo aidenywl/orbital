@@ -1,4 +1,25 @@
 <% provide(:title, "Competitions") %>
 
-<h1>StaticPages#competition_list</h1>
-<p>Find me in app/views/static_pages/competition_list.html.erb</p>
+<h1>List of Competitions</h1>
+
+
+<div class="container">
+    <h1></h1>
+
+    <h2>Competition 1</h2> 
+    <center><%= link_to image_tag("test.png", alt: "competition 1", size:"886x210"),
+    '/competitions' %></center>
+
+    <br>
+
+    <h2>Competition 2</h2> 
+    <center><%= link_to image_tag("test.png", alt: "competition 1", size:"886x210"),
+    '/competitions' %></center>
+
+    <br>
+
+    <h2>Competition 3</h2>
+
+    <center><%= link_to image_tag("test.png", alt: "competition 1", size:"886x210"),
+    '/competitions' %></center>
+</div>
