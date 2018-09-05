@@ -12,13 +12,24 @@
         <br>
         <br>
         <br>
-        <%= "Email: " + @student.email.to_s %>
+        <%= "Email: " %>
         <br><br>
-        <%= "Phone Number: " + @student.phone_number.to_s %>
+        <%= @student.email.to_s%>
         <br><br>
-        <%= "Date of Birth: " + @student.dob.to_s %>
+        <hr>
+        <%= "Phone Number: " %> 
         <br><br>
-        <%= "Education Level: " + @student.education_level.to_s %>
+        <%=@student.phone_number.to_s %>
+        <br><br>
+        <hr>
+        <%= "Date of Birth: "%>
+        <br><br>
+        <%= @student.dob.to_s %>
+        <br><br>
+        <hr>
+        <%= "Education Level: " %>
+        <br><br>
+        <%= @student.education_level.to_s %>
       </h1>
     </section>
   </aside>
